@@ -11,34 +11,40 @@
     </div>
   <% end %>
 
-  <div>
+  <div class= "field form-group">
     <%= form.label :first_name, style: "display: block" %>
-    <%= form.text_field :first_name %>
+    <%= form.text_field :first_name , class: "form-control",
+    placeholder: "First Name"%>
   </div>
 
-  <div>
+  <div class= "field form-group">
     <%= form.label :last_name, style: "display: block" %>
-    <%= form.text_field :last_name %>
+    <%= form.text_field :last_name, class: "form-control",
+    placeholder: "Last Name" %>
   </div>
 
-  <div>
+  <div class= "field form-group">
     <%= form.label :email, style: "display: block" %>
-    <%= form.text_field :email %>
+    <%= form.text_field :email, class: "form-control",
+    placeholder: "Email" %>
   </div>
 
-  <div>
+  <div class= "field form-group">
     <%= form.label :phone, style: "display: block" %>
-    <%= form.text_field :phone %>
+    <%= form.text_field :phone, class: "form-control",
+    placeholder: "Phone" %>
   </div>
 
-  <div>
+  <div class= "field form-group">
     <%= form.label :linkedin, style: "display: block" %>
-    <%= form.text_field :linkedin %>
+    <%= form.text_field :linkedin, class: "form-control",
+    placeholder: "LinkedIn" %>
   </div>
 
-  <div>
+  <div class= "field form-group">
     <%= form.label :company, style: "display: block" %>
-    <%= form.text_field :company %>
+    <%= form.text_field :company, class: "form-control",
+    placeholder: "Company" %>
   </div>
 
   <div>

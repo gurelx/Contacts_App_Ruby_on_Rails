@@ -1,24 +1,9 @@
-# README
+# Contact App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple web contact app you can use to list all of the contacts you added, and edit them.
 
-Things you may want to cover:
+## Specifications:
 
-* Ruby version
+* This app has been created on Ruby 3.1.3, and Rails 7.0.4.2. Also I have used Bootstrap v5.3 to style it.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* You can use it on the latest version of Chrome. 

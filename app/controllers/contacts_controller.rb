@@ -1,6 +1,6 @@
 class ContactsController < ApplicationController
   before_action :set_contact, only: %i[ show edit update destroy ]
-
+  before_action :authenticate_user!, except: [:index, :show]
   # GET /contacts or /contacts.json
   def index
     @contacts = Contact.all
@@ -12,7 +12,7 @@ class ContactsController < ApplicationController
 
   # GET /contacts/new
   def new
-    @contact = Contact.new
+    @contact = current_user.contacts.build
   end
 
   # GET /contacts/1/edit
@@ -21,7 +21,7 @@ class ContactsController < ApplicationController
 
   # POST /contacts or /contacts.json
   def create
-    @contact = Contact.new(contact_params)
+    @contact = current_user.contacts.build(contact_params)
 
     respond_to do |format|
       if @contact.save

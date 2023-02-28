@@ -34,8 +34,27 @@
 
   <%= link_to "New contact", new_contact_path, class:"btn btn-secondary" %>
 <% else %>
+<% content_for :head do %>
+  <script src="app\assets\stylesheets\index.css"></script>
+<% end %>
+        
 
-  <h1>Hello World!</h1>
-  <p>Find me in app/views/home/index.html.erb</p>
+    <main>
+      <section class="hero">
+      <h1> Welcome to Card Rack! </h1> <br> <br>
+        <h2>Save and manage your contacts with ease.</h2>
+        <%= form_for(:user, :url => session_path(:user)) do |f| %>
+          <%= f.email_field :email, class: "form_item",
+    placeholder: " Enter your Email", autofocus: true, autocomplete: "email" %> <br>
+          <%= f.password_field :password, class: "form_item",
+    placeholder: " Password", autocomplete: "current-password" %> <br>
+          <%= f.submit "Log in", class: "log_button" %>
+        <% end %>
+        <p>Don't have an account? <%= link_to 'Sign up now', new_user_registration_path%></p>
+      </section>
+      <div class="image">
+    <%= image_tag "unold_icon1_animation_loop_f.gif", class: "main_img" %>
+      </div>
+    </main>
 
 <% end %>
